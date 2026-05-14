@@ -1,0 +1,27 @@
+# Ignore everything first
+*
+!*/
+
+# Allow only essential files
+!lib/
+!web/
+!assets/
+!pubspec.yaml
+!pubspec.lock
+!vercel.json
+!.gitignore
+
+# Allow only web build
+!build/
+build/*
+!build/web/
+
+# Ignore heavy folders
+/android/
+/ios/
+/windows/
+/linux/
+/macos/
+.dart_tool/
+.pub/
+node_modules/
