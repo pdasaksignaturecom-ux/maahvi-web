@@ -1,15 +1,15 @@
 {
-  "installCommand": "git clone https://github.com/flutter/flutter.git -b stable --depth 1 && ./flutter/bin/flutter doctor && ./flutter/bin/flutter config --enable-web",
+  "installCommand": "if [ -d \"flutter\" ]; then rm -rf flutter; fi && git clone https://github.com/flutter/flutter.git -b stable --depth 1 && ./flutter/bin/flutter doctor && ./flutter/bin/flutter config --enable-web",
   "buildCommand": "./flutter/bin/flutter build web --release --web-renderer html && cp web/google3648f8a8f8383144.html build/web/ && cp web/maahvi_lottery.apk build/web/",
   "outputDirectory": "build/web",
   "rewrites": [
     {
-      "source": "/maahvi_lottery.apk",
-      "destination": "/maahvi_lottery.apk"
-    },
-    {
       "source": "/google3648f8a8f8383144.html",
       "destination": "/google3648f8a8f8383144.html"
+    },
+    {
+      "source": "/maahvi_lottery.apk",
+      "destination": "/maahvi_lottery.apk"
     },
     {
       "source": "/(.*)",
