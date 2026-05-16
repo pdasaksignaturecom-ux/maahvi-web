@@ -4,6 +4,7 @@
 /windows/
 /linux/
 /macos/
+/flutter/
 .dart_tool/
 .pub/
 .idea/
