@@ -1,5 +1,5 @@
 {
-  "installCommand": "if [ -d \"flutter\" ]; then rm -rf flutter; fi && git clone https://github.com/flutter/flutter.git -b stable --depth 1 && ./flutter/bin/flutter config --no-analytics && ./flutter/bin/flutter pub get",
+  "installCommand": "if [ -d \"flutter\" ]; then rm -rf flutter; fi && git clone https://github.com/flutter/flutter.git -b stable --depth 1 && ./flutter/bin/flutter config --no-analytics --enable-web && ./flutter/bin/flutter pub get",
   "buildCommand": "./flutter/bin/flutter build web --release --web-renderer html && cp web/google3648f8a8f8383144.html build/web/ && (cp web/maahvi_lottery.apk build/web/ || true)",
   "outputDirectory": "build/web",
   "rewrites": [
